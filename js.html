@@ -19,23 +19,65 @@
 
 
         // do not load home page vidow on mobile devices
-        $(
-            function () {
-                var bgv = $('#background_video');
+        // $(
+        //     function () {
+        //         var bgv = $('#background_video');
 
-                if (bgv.is(':visible')) {
-                    $('source', bgv).each(
-                        function () {
-                            var el = $(this);
-                            el.attr('src', el.data('src'));
-                        }
-                    );
+        //         if (bgv.is(':visible')) {
+        //             $('source', bgv).each(
+        //                 function () {
+        //                     var el = $(this);
+        //                     el.attr('src', el.data('src'));
+        //                 }
+        //             );
 
-                    bgv[0].load();
-                }
-            }
-        )
+        //             bgv[0].load();
+        //         }
+        //     }
+        // )
 
+
+        var video = document.getElementById('background_video');
+
+        // do not load home page vidow on mobile devices
+
+        var style = window.getComputedStyle(video);
+        console.log(style.display);
+
+        if (style.display !== "none") {
+            var source = document.createElement('source');
+
+            var videoList = [
+                "https://hwpi.harvard.edu/files/hmui/files/video2.mp4",
+                "https://hwpi.harvard.edu/files/hmui/files/video5.mp4",
+                "https://hwpi.harvard.edu/files/hmui/files/video6.mp4"
+            ];
+
+            // get a random video from the list
+            function getVideo(list){
+                //generate an id between 0 - 2
+                var videoID = Math.floor((Math.random() * 3));
+                
+                //return video
+                return list[videoID];
+            } 
+
+            //set initial video
+            source.setAttribute('src', getVideo(videoList));
+
+            video.appendChild(source);
+            video.play();
+
+            //change video every 10 minutes
+            setInterval(function () {
+                video.pause();
+
+                source.setAttribute('src', getVideo(videoList));
+
+                video.load();
+                video.play();
+            }, 600000);
+        }
 
         // makes lop news pic use full size image
         setInterval(function () {
@@ -45,12 +87,12 @@
         }, 250);
 
         //PULL IN LARGE PROFILE PIC        
-        //setInterval(function(){ 
+        setInterval(function () {
 
-        jQuery(".people-lop-lrg-pic article.node-person .field-name-field-person-photo").each(function () {
-            jQuery(this).html(jQuery(this).html().replace("profile_thumbnail", "profile_full"));
-        });
-        // }, 250);
+            jQuery(".people-lop-lrg-pic article.node-person .field-name-field-person-photo").each(function () {
+                jQuery(this).html(jQuery(this).html().replace("profile_thumbnail", "profile_full"));
+            });
+        }, 250);
 
         /* equal heights */
 
