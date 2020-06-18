@@ -1,0 +1,21 @@
+<html>
+<div id="video_container">
+	<video id="background_video" autoplay loop muted controls style="pointer-events: none;">
+		<source data-src="https://hwpi.harvard.edu/files/hmui/files/video2.mp4">
+    </video>
+ </div>
+<style>
+
+@media (max-width: 768px) {
+    #video_container {
+        background-image: url(https://hwpi.harvard.edu/files/hmui/files/mobile-header4.jpg?m=1588702884);
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    }
+    #video_container video {
+        display: none;
+    }
+}
+</style>
+</html>

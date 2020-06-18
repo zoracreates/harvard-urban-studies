@@ -1,0 +1,115 @@
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+
+
+    jQuery(document).ready(function () {
+
+        /* wrap logo and main menu*/
+        var logo = document.getElementById('block-boxes-site-logo');
+        var primaryNav = document.getElementById('block-os-primary-menu');
+
+        var menuWrapper = document.createElement('div');
+
+        menuWrapper.setAttribute("id", "menu-wrapper");
+
+        logo.parentNode.insertBefore(menuWrapper, logo);
+
+        menuWrapper.appendChild(logo);
+        menuWrapper.appendChild(primaryNav);
+
+
+        // do not load home page vidow on mobile devices
+        $(
+            function () {
+                var bgv = $('#background_video');
+
+                if (bgv.is(':visible')) {
+                    $('source', bgv).each(
+                        function () {
+                            var el = $(this);
+                            el.attr('src', el.data('src'));
+                        }
+                    );
+
+                    bgv[0].load();
+                }
+            }
+        )
+
+
+        // makes lop news pic use full size image
+        setInterval(function () {
+            jQuery(".full-news-pic figure").each(function () {
+                jQuery(this).html(jQuery(this).html().replace("/styles/os_square_100_100/public", ""));
+            });
+        }, 250);
+
+        //PULL IN LARGE PROFILE PIC        
+        //setInterval(function(){ 
+
+        jQuery(".people-lop-lrg-pic article.node-person .field-name-field-person-photo").each(function () {
+            jQuery(this).html(jQuery(this).html().replace("profile_thumbnail", "profile_full"));
+        });
+        // }, 250);
+
+        /* equal heights */
+
+        var maxHeight = 0;
+
+        jQuery(".equal .region-inner .block-content.content").each(function () {
+            if (jQuery(this).height() > maxHeight) { maxHeight = jQuery(this).height(); }
+        });
+        jQuery(".equal .region-inner .block-content.content").height(maxHeight);
+
+
+        /*SMOOTH SCROLL*/
+
+        //This function has been updated to maintain tab focus for accessibility
+
+        //reference https://codepen.io/theandyyates/details/dGovD
+
+        jQuery('a[href*=#]:not([href=#])').click(function (event) {
+
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+
+                target = $(this.hash);
+
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+                if (target.length) {
+
+                    $('html,body').animate({
+
+                        scrollTop: target.offset().top
+
+                    }, 875, function () {
+
+                        target.attr('tabindex', '-1');
+
+                        target.focus();
+
+                    });
+
+                    location.hash = target;
+
+                    return false;
+
+                }
+
+            }
+
+        });
+
+
+
+
+
+
+
+
+
+    });
+
+
+
+</script>
