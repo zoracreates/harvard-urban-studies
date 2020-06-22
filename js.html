@@ -18,25 +18,6 @@
         menuWrapper.appendChild(primaryNav);
 
 
-        // do not load home page vidow on mobile devices
-        // $(
-        //     function () {
-        //         var bgv = $('#background_video');
-
-        //         if (bgv.is(':visible')) {
-        //             $('source', bgv).each(
-        //                 function () {
-        //                     var el = $(this);
-        //                     el.attr('src', el.data('src'));
-        //                 }
-        //             );
-
-        //             bgv[0].load();
-        //         }
-        //     }
-        // )
-
-
         var video = document.getElementById('background_video');
 
         // do not load home page vidow on mobile devices
@@ -48,16 +29,18 @@
             var source = document.createElement('source');
 
             var videoList = [
-                "https://hwpi.harvard.edu/files/hmui/files/video2.mp4",
-                "https://hwpi.harvard.edu/files/hmui/files/video5.mp4",
-                "https://hwpi.harvard.edu/files/hmui/files/video6.mp4"
+                "https://hwpi.harvard.edu/files/hmui/files/video1.mp4", //0
+                "https://hwpi.harvard.edu/files/hmui/files/video2.mp4", //1
+                "https://hwpi.harvard.edu/files/hmui/files/video3.mp4",//2
+                "https://hwpi.harvard.edu/files/hmui/files/video4.mp4",//3
+                "https://hwpi.harvard.edu/files/hmui/files/video5.mp4", //4
+                "https://hwpi.harvard.edu/files/hmui/files/video6.mp4" //5
             ];
 
             // get a random video from the list
             function getVideo(list){
-                //generate an id between 0 - 2
-                var videoID = Math.floor((Math.random() * 3));
-                
+                //generate an id between 0 - 5
+                var videoID = Math.floor((Math.random() * 6));    
                 //return video
                 return list[videoID];
             } 
@@ -68,7 +51,7 @@
             video.appendChild(source);
             video.play();
 
-            //change video every 10 minutes
+            //change video every 15 minutes
             setInterval(function () {
                 video.pause();
 
@@ -76,7 +59,8 @@
 
                 video.load();
                 video.play();
-            }, 600000);
+            }, 900000);
+       
         }
 
         // makes lop news pic use full size image

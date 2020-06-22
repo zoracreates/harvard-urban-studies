@@ -880,7 +880,7 @@
 
     .intro-widget {
         min-height: 70vh;
-        padding-top: 20vh;
+        padding-top: 15vh;
         position: relative;
         box-sizing: border-box;
         z-index: 1;
@@ -909,9 +909,11 @@
     }
 
     #background_video {
-        width: 150%;
-        max-width: 150%;
-        min-height: 130vh;
+        /* width: 130%;
+        max-width: 130%; */
+        width: 125%;
+        max-width: 125%;
+        min-height: 70vh;
     }
 
     /*the intro-widget height helps determine position of footer*/
@@ -952,6 +954,14 @@
         left: 0;
         right: 0;
         background-image: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.1));
+        background-image: -webkit-linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.1));
+        /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+        background-image: -moz-linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.1));
+        /* For Firefox (3.6 to 15) */
+        background-image: -o-linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.1));
+        /* For old Opera (11.1 to 12.0) */
+        background-image: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.1));
+        /* Standard syntax; must be last */
     }
 
     .front .intro-text p {
