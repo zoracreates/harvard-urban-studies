@@ -1,29 +1,29 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
 
+    /* wrap logo and main menu*/
+    var logo = document.getElementById('block-boxes-site-logo');
+    var primaryNav = document.getElementById('block-os-primary-menu');
+
+    var menuWrapper = document.createElement('div');
+
+    menuWrapper.setAttribute("id", "menu-wrapper");
+
+    logo.parentNode.insertBefore(menuWrapper, logo);
+
+    menuWrapper.appendChild(logo);
+    menuWrapper.appendChild(primaryNav);
+
+
 
     jQuery(document).ready(function () {
-
-        /* wrap logo and main menu*/
-        var logo = document.getElementById('block-boxes-site-logo');
-        var primaryNav = document.getElementById('block-os-primary-menu');
-
-        var menuWrapper = document.createElement('div');
-
-        menuWrapper.setAttribute("id", "menu-wrapper");
-
-        logo.parentNode.insertBefore(menuWrapper, logo);
-
-        menuWrapper.appendChild(logo);
-        menuWrapper.appendChild(primaryNav);
-
 
         var video = document.getElementById('background_video');
 
         // do not load home page vidow on mobile devices
 
         var style = window.getComputedStyle(video);
-        console.log(style.display);
+
 
         if (style.display !== "none") {
             var source = document.createElement('source');
@@ -38,12 +38,12 @@
             ];
 
             // get a random video from the list
-            function getVideo(list){
+            function getVideo(list) {
                 //generate an id between 0 - 5
-                var videoID = Math.floor((Math.random() * 6));    
+                var videoID = Math.floor((Math.random() * 6));
                 //return video
                 return list[videoID];
-            } 
+            }
 
             //set initial video
             source.setAttribute('src', getVideo(videoList));
@@ -60,9 +60,12 @@
                 video.load();
                 video.play();
             }, 900000);
-       
+
         }
 
+    });
+
+    jQuery(document).ready(function () {
         // makes lop news pic use full size image
         setInterval(function () {
             jQuery(".full-news-pic figure").each(function () {
@@ -125,14 +128,6 @@
             }
 
         });
-
-
-
-
-
-
-
-
 
     });
 
