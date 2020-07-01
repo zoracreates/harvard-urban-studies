@@ -14,7 +14,15 @@
     menuWrapper.appendChild(logo);
     menuWrapper.appendChild(primaryNav);
 
+    jQuery(document).ready(function () {
 
+
+        // TOGGLES THE SEARCH BLOCK
+        jQuery('#menu-bar ul.nice-menu li.last a[title="Site Search"]').click(function () {
+            jQuery('.block-boxes-os_search_solr_search_box').toggleClass('show');
+        });
+
+    });
 
     jQuery(document).ready(function () {
 

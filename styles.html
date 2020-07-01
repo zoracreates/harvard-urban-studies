@@ -402,7 +402,7 @@
     }
 
     #menu-bar nav#block-os-primary-menu {
-        max-width: 692px;
+        max-width: 730px;
         margin: 0;
         display: flex;
         align-items: flex-end;
@@ -1760,6 +1760,32 @@
         padding-bottom: 0px;
     }
 
+    /* show/hide search*/
+
+    #header .block-boxes-os_search_solr_search_box {
+
+        display: none;
+    }
+
+    #menu-bar ul.nice-menu li.last a[title="Site Search"] {
+        padding: 20px 30px;
+        background-image: url(files/search-light-with-shadow.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25px;
+        font-size: 0;
+    }
+
+    #header .block-boxes-os_search_solr_search_box.show {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 135px;
+        z-index: 1;
+        width: 349px;
+        background-color: #333;
+        padding: 15px;
+    }
 
 
     /* BROSWER SPECIFIC RULES */
@@ -1827,9 +1853,9 @@
             z-index: 2;
         }
 
-        /* .branding-left {
-            float: left;
-        } */
+        .link-count-mobi-search a {
+            background-color: #333;
+        }
 
         #menu-bar #block-os-primary-menu.opened,
         ul#nice-menu-secondary-menu {
