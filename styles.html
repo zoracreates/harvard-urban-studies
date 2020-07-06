@@ -892,7 +892,7 @@
 
     .video-widget {
         position: absolute;
-        top: -200px;
+        top: -205px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -1241,6 +1241,7 @@
         display: none !important;
     }
 
+    .project:not(.slider) #block-os-pages-main-content article div:first-child figure,
     .project:not(.slider) #block-os-pages-main-content article div:first-child img {
         display: block;
         margin: auto;
@@ -1248,6 +1249,10 @@
         padding-right: 0px;
         padding-left: 0px;
         max-width: 600px;
+    }
+
+    .project:not(.slider) #block-os-pages-main-content article div:first-child figure img {
+        padding-bottom: 0px;
     }
 
     /* landing page with hero image */
