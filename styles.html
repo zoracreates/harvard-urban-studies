@@ -28,6 +28,7 @@
     body,
     a,
     a:visited {
+        /* font-family: 'Merriweather', serif !important; */
         font-family: 'Roboto', sans-serif !important;
         line-height: 1.5;
     }
@@ -464,7 +465,7 @@
     }
 
     #menu-bar ul.nice-menu a:hover:after,
-    #menu-bar ul.nice-menu a.active:after {
+    #menu-bar ul.nice-menu a[class*="active active"]:after {
         width: 100%;
     }
 
@@ -836,6 +837,8 @@
     a.more-link {
         font-size: 16px;
     }
+
+
 
     /* screen reader visible only */
     ul.sr-only {
@@ -1321,6 +1324,25 @@
     .landing.boston #main-content-header {
         background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/3_boston_cover.jpg) !important;
     }
+
+    .landing.berlin #header,
+    .landing.berlin #menu-bar,
+    .landing.berlin #main-content-header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/berlin_cover.jpg) !important;
+    }
+
+    .landing.istanbul #header,
+    .landing.istanbul #menu-bar,
+    .landing.istanbul #main-content-header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/istanbul_cover.jpg) !important;
+    }
+
+    .landing.mumbai #header,
+    .landing.mumbai #menu-bar,
+    .landing.mumbai #main-content-header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/mumbai_cover.jpg) !important;
+    }
+
 
     .landing.people #header,
     .landing.people #menu-bar,
