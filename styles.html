@@ -1823,7 +1823,7 @@
         padding: 15px;
     }
 
-    #footer .region.region-footer .region-inner {
+    /* #footer .region.region-footer .region-inner {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -1836,7 +1836,7 @@
         flex-basis: 20%;
         margin: auto;
 
-    }
+    } */
 
     .footer-contact {
         text-align: center;
@@ -1852,14 +1852,19 @@
         font-weight: 700;
     }
 
-    .footer-social ul {
-        display: flex;
-        justify-content: space-around;
+    .footer-social {
+        margin-top: 40px;
     }
 
-    .footer-social ul li:not(:only-child):not(:last-child){
+    .footer-social ul {
+        display: flex;
+        justify-content: normal;
+    }
+
+    .footer-social ul li:not(:only-child):not(:last-child) {
         padding-right: 25px;
-    } 
+    }
+
     .footer-social ul li img {
         max-width: 35px;
     }
@@ -1892,8 +1897,12 @@
     }
 
     #footer p.os-button a,
-    #footer p.os-button a:visited {
+    #footer p.os-button a:visited,
+    #boxes-box-os_box_mailchimp a,
+    #boxes-box-os_box_mailchimp a:visited {
         font-family: 'Lato', sans-serif !important;
+        padding: 12px;
+        font-size: 1.25rem;
         background: transparent;
         font-weight: 700;
         font-size: 1.125rem;
@@ -2048,11 +2057,28 @@
         .footer-logo,
         .footer-nav,
         .footer-social,
-        .footer-contact {
-            padding: 0px 15px;
+        .footer-contact,
+         #block-boxes-os-box-mailchimp {
+            padding: 15px;
 
         }
 
+        #footer .four-4x25>.panel-row>.region {
+            width: 90%;
+        }
+
+        .footer-social {
+            margin-top: 20px;
+        }
+
+        .footer-social ul {
+            margin-bottom: 0px;
+        }
+
+        #footer .block-boxes-os_boxes_columns .panel-row.row-1 .region, 
+       #footer .block-boxes-os_boxes_columns .panel-row .region {
+           margin: 0%
+       }
 
     }
 
