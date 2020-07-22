@@ -7,7 +7,6 @@
 
     /*make contextual buttons distiguishable*/
     .contextual-controls-wrapper {
-        top: 100px;
         padding: 20px;
         background: #fff;
     }
@@ -34,7 +33,9 @@
     }
 
     a,
-    a:visited {
+    a:visited,
+    .not-front:not(.landing) .breadcrumb a,
+    .not-front:not(.landing) .breadcrumb a:visited{
         color: #B33440;
     }
 
@@ -79,6 +80,10 @@
     .cal-export,
     .tabs.primary li a {
         text-transform: uppercase;
+    }
+
+    .node-type-page:not(.landing) h1#page-title {
+        margin-bottom: 20px;
     }
 
     .cal-export {
@@ -1170,10 +1175,11 @@
         background-color: #222;
     }
 
-    .portal .band.anchors ul {
+    .portal .band.anchors ul:not(.contextual-links)  {
         margin: 0px;
         display: flex;
         justify-content: space-around;
+        padding: 0 20px;
     }
 
     .portal .band.anchors ul li {
@@ -1307,66 +1313,65 @@
     .landing.about #menu-bar,
     .landing.about #main-content-header {
         /*orginally  stated with rgba(51, 51, 51, 0.7)*/
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/header-about.jpg) !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(51, 51, 51, 0.3)), url(/files/hmui/files/header-about.jpg) !important;
         background-position: left bottom !important;
     }
 
     .landing.projects #header,
     .landing.projects #menu-bar,
     .landing.projects #main-content-header {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/projects-cover-4.jpg) !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(51, 51, 51, 0.3)), url(/files/hmui/files/projects-cover-4.jpg) !important;
     }
 
     .landing.boston #header,
     .landing.boston #menu-bar,
     .landing.boston #main-content-header {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/3_boston_cover.jpg) !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(51, 51, 51, 0.3)), url(/files/hmui/files/3_boston_cover.jpg) !important;
     }
 
     .landing.berlin #header,
     .landing.berlin #menu-bar,
     .landing.berlin #main-content-header {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/berlin_cover.jpg) !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(51, 51, 51, 0.3)), url(/files/hmui/files/berlin_cover.jpg) !important;
     }
 
     .landing.istanbul #header,
     .landing.istanbul #menu-bar,
     .landing.istanbul #main-content-header {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/istanbul_cover.jpg) !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(51, 51, 51, 0.3)), url(/files/hmui/files/istanbul_cover.jpg) !important;
     }
 
     .landing.mumbai #header,
     .landing.mumbai #menu-bar,
     .landing.mumbai #main-content-header {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/mumbai_cover.jpg) !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(51, 51, 51, 0.3)), url(/files/hmui/files/mumbai_cover.jpg) !important;
     }
 
 
     .landing.people #header,
     .landing.people #menu-bar,
     .landing.people #main-content-header {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/header-single-people-e1498165453209.jpg) !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(51, 51, 51, 0.3)), url(/files/hmui/files/header-single-people-e1498165453209.jpg) !important;
         background-position: left bottom !important;
     }
 
     .landing.courses #header,
     .landing.courses #menu-bar,
     .landing.courses #main-content-header {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/courses-header-6.jpg) !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(51, 51, 51, 0.3)), url(/files/hmui/files/courses-header-6.jpg) !important;
     }
 
     .landing.news #header,
     .landing.news #menu-bar,
     .landing.news #main-content-header {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/header-single-event-e1497499353667.jpg) !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(51, 51, 51, 0.3)), url(/files/hmui/files/header-single-event-e1497499353667.jpg) !important;
     }
 
     .landing.opportunities #header,
     .landing.opportunities #menu-bar,
     .landing.opportunities #main-content-header {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(51, 51, 51, 0.1)), url(/files/hmui/files/opportunities-header.jpg) !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(51, 51, 51, 0.3)), url(/files/hmui/files/opportunities-header.jpg) !important;
     }
-
 
     /*landing page search */
 
@@ -1458,7 +1463,7 @@
         padding-top: 20px;
     }
 
-    .light-block>.block-inner>.block-content {
+    #content-panels .light-block>.block-inner>.block-content {
         padding: 20px;
     }
 
@@ -1508,6 +1513,10 @@
 
     .secondary-band {
         background-color: #E0E0E0;
+    }
+
+    .secondary-band .boxes-box-content {
+        padding: 20px;
     }
 
     .card-link {
@@ -2045,6 +2054,18 @@
             top: 0px;
         }
 
+        body.node-type-page.landing h1#page-title,
+        .landing:not(.project) .breadcrumb {
+            padding-left: 10px;
+        }
+
+
+        .news article.node-teaser {
+            flex-basis: 40%;
+        }
+
+
+
         #footer .region.region-footer .region-inner {
             display: block;
 
@@ -2058,7 +2079,7 @@
         .footer-nav,
         .footer-social,
         .footer-contact,
-         #block-boxes-os-box-mailchimp {
+        #block-boxes-os-box-mailchimp {
             padding: 15px;
 
         }
@@ -2075,10 +2096,10 @@
             margin-bottom: 0px;
         }
 
-        #footer .block-boxes-os_boxes_columns .panel-row.row-1 .region, 
-       #footer .block-boxes-os_boxes_columns .panel-row .region {
-           margin: 0%
-       }
+        #footer .block-boxes-os_boxes_columns .panel-row.row-1 .region,
+        #footer .block-boxes-os_boxes_columns .panel-row .region {
+            margin: 0%
+        }
 
     }
 
@@ -2092,8 +2113,16 @@
     @media(max-width:768px) {
 
         /***** BASE THEME ****/
-        .event-start .event-content {
+        /* .event-start .event-content {
             margin-left: 40px !important;
+        }
+
+        .news .event-start .event-content {
+
+        } */
+
+        .not-front:not(.landing) .node-event .field-name-field-date.field-type-datetime.view-mode-teaser {
+            margin-left: 70px;
         }
 
         .not-front .band h2.block-title,
@@ -2130,9 +2159,17 @@
             padding-top: 0px;
         }
 
+        .news article.node-teaser.node-event {
+            flex-basis: 70%;
+        }
+
     }
 
     @media(max-width:670px) {
+
+        .landing:not(.project):not(.portal) #block-os-pages-main-content {
+            font-size: 1em;
+        }
 
         /*** CUSTOM STYLES  ***/
         .seminars .sv-list-event {
@@ -2171,9 +2208,21 @@
         }
 
 
-        .portal .band.anchors ul {
+        .portal .band.anchors ul:not(.contextual-links) {
             display: block;
         }
+
+        .news .sv-list-news,
+        .news .sv-list-event {
+            display: block;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        .landing:not(.project) h1#page-title {
+            font-size: 2em;
+        }
+
 
     }
 
@@ -2196,6 +2245,11 @@
             margin-left: auto;
         }
 
+        .view-os-events .node-event .field-type-text-with-summary div:first-child img,
+        .view-os-events .node-event .field-type-text-with-summary p:first-child img {
+            float: none;
+        }
+
     }
 
     @media(max-height:568px) {
@@ -2206,6 +2260,7 @@
         .hp-news h1.node-title {
             font-size: 14px;
         }
+
 
     }
 
