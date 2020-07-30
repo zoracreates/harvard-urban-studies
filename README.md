@@ -1,8 +1,8 @@
-# Mahindra Humanities Center Open Scholar Theme
+# Harvard Mellon Urban Initiative Open Scholar Theme
 
 The following CSS and JavaScript files have been added to the new Harvard Mellon Urban Initiative via [Open Scholar embed media widgets](https://help.theopenscholar.com/embed-media-widget), to customize a [one page theme](https://help.theopenscholar.com/one-page-themes).
 
-This website launched on Jyly 2020.
+This website launched on July 2020.
 
 ## Website Goals
 1. Transfer the original Urban Intitative website from a non-Harvard managed platform, to a Harvard managed Open Scholar platform
