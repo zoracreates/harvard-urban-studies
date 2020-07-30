@@ -9,8 +9,8 @@ This website launched on July 2020.
 2. Maintain the general look and feel of the website, including the rotating videos on the home page and the black and white images that turn color on hover. 
 3. Improve the website's accessibility.
 4. Improve the navigation on the home page and the project pages.
-5. Crate a structure that is sustainable and scalable throughout the different phases of the Urban Initiative.
-5. Assure that the home page background video has full mobile responsiveness
+5. Create a structure that is sustainable and scalable throughout the different phases of the Urban Initiative.
+6. Assure that the home page background video has full mobile responsiveness
 
 ## Key features include
 * Custom cards
