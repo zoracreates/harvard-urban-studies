@@ -15,6 +15,6 @@ This website launched on July 2020.
 ## Key features include
 * Custom cards
 * Custom typography
-* Hero images on landing pages extend up to the menu. 
-* A rotating video for the home page.
-* A search bard that colapses and expands horizontally 
+* Hero images on landing pages extend up to the menu
+* A rotating video for the home page
+* A search bar that colapses and expands horizontally 
