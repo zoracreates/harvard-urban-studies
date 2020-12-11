@@ -1,6 +1,6 @@
 # Harvard Mellon Urban Initiative Open Scholar Theme
 
-The following CSS and JavaScript files have been added to the new Harvard Mellon Urban Initiative via [Open Scholar embed media widgets](https://help.theopenscholar.com/embed-media-widget), to customize a [one page theme](https://help.theopenscholar.com/one-page-themes).
+The following CSS and JavaScript files have been added to the new [Harvard Mellon Urban Initiative](https://mellonurbanism.harvard.edu/) via [Open Scholar embed media widgets](https://help.theopenscholar.com/embed-media-widget), to customize a [one page theme](https://help.theopenscholar.com/one-page-themes).
 
 This website launched on July 2020.
 
